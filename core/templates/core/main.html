@@ -6,7 +6,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="../caosnews2.0/css/style.css" rel="stylesheet" type="text/css">
+    {% load static %}
+    <link href="{% static 'core/css/style.css' %}" rel="stylesheet" type="text/css">
     <script>
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
    </script>
@@ -30,8 +31,10 @@
 
 </head>
 <body id="body">
+  {% load static %}
+  {% load templates %}
     <nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
-        <a id="seleccionar" class="navbar-brand" href="#"><img src="imagenes/caos news logo.jpg" alt="Logo Caos-News" width="170" height="50"></a>
+        <a id="seleccionar" class="navbar-brand" href="#"><img src=" {% static 'core/img/caos news logo.jpg' %}" alt="Logo Caos-News" width="170" height="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,15 +77,15 @@
             <!-- The slideshow -->
             <div  class="carousel-inner imagenAuto">
               <div class="carousel-item active">
-                <a href="../caosnews2.0/noticias/noticia2222.html"><img src="../caosnews2.0/imagenes/Balacera 1.jpg" class="img-fluid" alt="Los Angeles"></a>
+                <a href="{% templates 'core/noticia2222.html' %}"><img src="{% static 'core/img/Balacera 1.jpg'%}" class="img-fluid" alt="Los Angeles"></a>
                 <div class="carousel-caption">
                 </div>
               </div>
               <div class="carousel-item">
-                <a href="../caosnews2.0/noticias/noticia1111.html"><img src="../caosnews2.0/imagenes/Choque2.jpg" class="img-fluid" style="margin: -3%;"alt="Chicago"></a>
+                <a href="../caosnews2.0/noticias/noticia1111.html"><img src="{% static 'core/img/Choque2.jpg'%}" class="img-fluid" style="margin: -3%;"alt="Chicago"></a>
               </div>
               <div class="carousel-item imagenAuto">
-                <a href="../caosnews2.0/noticias/noticia3333.html"><img src="../caosnews2.0/imagenes/Fruta 5.jpg" class="img-fluid" style="margin: -5%;" alt="New York"></a>
+                <a href="../caosnews2.0/noticias/noticia3333.html"><img src="{% static 'core/img/Fruta 5.jpg'%}" class="img-fluid" style="margin: -5%;" alt="New York"></a>
               </div>
             </div>
           
