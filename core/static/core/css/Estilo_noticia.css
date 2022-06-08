@@ -1,0 +1,58 @@
+.titulo{
+  font-size: xx-large;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: rgb(79, 105, 255);
+  text-shadow: 2px 2px 5px rgb(255, 255, 255);
+  background-color: powderblue;
+  padding: 20px;
+}
+
+.fe{
+  font-size: x-large;
+  text-align: right;
+  background-color: powderblue;
+  padding-right: 140px;
+}
+
+.cuerpo{
+  text-align: justify;
+  font-size: medium;
+  width: 40%;
+  margin: 2rem auto;
+  background-color: powderblue;
+  padding: 20px;
+
+}
+
+.pe{
+  font-size: small;
+  padding-top:40px;
+  text-align: center;
+
+}
+
+
+.img1{
+  float: left;
+  padding-left: 20px;
+  width: 350px;
+  height: 350px;
+}
+
+.img2{
+  float: right;
+  padding-right: 20px;
+  width: 350px;
+  height: 350px;
+}
+
+.contenido{
+  background-color: powderblue;
+  width: 100%;
+}
+
+.boton{
+align-items: center;
+  
+}
