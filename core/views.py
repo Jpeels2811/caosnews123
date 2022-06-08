@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Noticia
+from .forms import NoticiaForm
 
 # Create your views here.
 
@@ -31,3 +33,43 @@ def paginaregister(request):
 
 def subirnoticia(request):
     return render(request,'core/subir noticia.html')
+
+
+def listanoticias(request):
+
+    noticias= Noticia.objects.all()
+
+    datos ={
+        'noticias' : noticias
+    }
+    return render(request, 'core/listanoticias.html', datos)
+
+
+def form_noticia(request):
+
+    datos ={
+        'form' : NoticiaForm()
+    }
+    if request.method=='POST':
+        formulario=NoticiaForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje']='Datos guardados correctamente'
+    return render(request, 'core/form_noticia.html', datos)
+
+def form_mod_noticia(request, codigo):
+    noticia = Noticia.objects.get(codigo=codigo)
+    datos = { 
+        'form': NoticiaForm(instance=noticia),
+        }
+    if request.method=='POST':
+        formulario=NoticiaForm(data=request.POST, instance=noticia)
+        if formulario.is_valid():
+            formulario.save()
+            datos['mensaje']='Datos modificados correctamente'
+    return render(request, 'core/form_mod_noticia.html', datos)
+
+def form_del_noticia( request, codigo):
+    noticia = Noticia.objects.get(codigo=codigo)
+    noticia.delete()
+    return redirect(to="mainlogeado")

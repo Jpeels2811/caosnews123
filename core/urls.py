@@ -13,4 +13,9 @@ urlpatterns = [
     path('main logeado/', mainlogeado, name="mainlogeado"),
     path('buscador/', buscador, name="buscador"),
     path('subir noticia/', subirnoticia, name="subirnoticia"),
+    path('listanoticias/', listanoticias, name="listanoticias"),
+    path('form_noticia/', form_noticia, name="form_noticia"),
+    path('form_mod_noticia/<codigo>', form_mod_noticia, name="form_mod_noticia"),
+    path('form_del_noticia/<codigo>', form_del_noticia, name="form_del_noticia"),
+   
     ]   
