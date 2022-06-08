@@ -1,7 +1,9 @@
 from django.urls import path
-from .views import main
+from .views import main, paginaregister
+
 
 urlpatterns = [
     path('', main,name="main"),
-    path('', noticia1111, name="noticia1"),
-]
+    path('PaginaRegister/',paginaregister,name="paginaregister"),
+    
+    ]
