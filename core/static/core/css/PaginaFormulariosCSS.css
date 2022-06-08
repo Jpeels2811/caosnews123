@@ -1,0 +1,83 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.formulario
+{
+width: 400px;
+background-color: powderblue;
+padding: 30px;
+margin: auto;   
+margin-top: 100px;
+border-radius: 4px;
+font-family: Verdana;
+color:black;
+}
+
+.formulario h1
+{
+font-family: Verdana;
+font-size: 26px;
+margin-bottom: 20px;
+text-align: center;
+color:black ;
+
+}
+
+.linestxt
+{
+width: 100%;
+background:powderblue;
+padding: 10px;
+border-radius:4px ;
+margin-bottom: 16px;
+border: 1px solid rgb(255, 255, 255);
+font-family: Verdana;
+font-size: 18px;
+color: black;
+}
+
+.bottons
+{
+width: 100%;
+background: rgb(0, 65, 122);
+padding: 10px;
+border-radius: 4px;
+margin-bottom: 16px;
+border: 1px solid white;
+font-family: Verdana;
+font-size:18px;
+color: black;
+}
+
+.formulario p
+{
+font-family: Verdana;
+font-size: 17px;
+margin-bottom: 15px;
+text-align: left;
+}
+
+.body
+{
+margin: 0;
+padding: 0;
+background-image: url(../../Imagenes/fondo.jpg);
+background-size: cover;
+background-position: center;
+font-family: sans-serif;
+}
+
+.formulario a
+{
+font-family: Verdana;
+font-size: 14px;
+margin-bottom: 15px;
+text-align: right;
+color: black;
+
+}
+

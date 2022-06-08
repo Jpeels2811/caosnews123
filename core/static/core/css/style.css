@@ -1,0 +1,22 @@
+#body{
+    background-color: powderblue;
+}
+    .carousel-inner {
+    height: 100%;
+    width: 30%;
+    margin-left: 35%;
+    margin-block-end: 3%;
+  }
+  .item{
+    height: 100% !important;
+    width:  100% !important;
+    left: 30px;
+    
+    }
+    #boton{
+        margin-left: 2%;
+    }
+    #color{
+       color: black;
+       text-decoration: line-through;
+    }
