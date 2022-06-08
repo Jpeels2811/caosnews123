@@ -34,7 +34,7 @@
   {% load static %}
   
     <nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
-        <a id="seleccionar" class="navbar-brand" href="#"><img src=" {% static 'core/img/caos news logo.jpg' %}" alt="Logo Caos-News" width="170" height="50"></a>
+        <a id="seleccionar" class="navbar-brand" href="{% url 'main' %}"><img src=" {% static 'core/img/caos_news_logo.jpg' %}" alt="Logo Caos-News" width="170" height="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,16 +45,16 @@
               <a class="btn btn-primary" href="{% url 'paginaregister' %}">Registrate aquí </a>
             </li>
             <li id="boton" class="nav-item">
-              <a class="btn btn-primary" href="PaginaLogin.html">Iniciar sesión</a>
+              <a class="btn btn-primary" href="{% url 'paginalogin' %}">Iniciar sesión</a>
             </li>
             
             <li id="boton" class="nav-item">
-              <a class="btn btn-primary" href="../caosnews2.0/formulario1.html">Trabaja con nosotros</a>
+              <a class="btn btn-primary" href="{% url 'formulario1' %}">Trabaja con nosotros</a>
             </li>
           </ul>
           <form id="boton" class="form-inline my-2 my-lg-0">
             <input  class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-            <a href="../caosnews2.0/buscador.html" ><button id="boton1" class="btn btn-primary btn-primary-outline-success" type="button">Buscar</button></a>
+            <a href="{% url 'buscador' %}" ><button id="boton1" class="btn btn-primary btn-primary-outline-success" type="button">Buscar</button></a>
           </form>
         </div>
       </nav>
@@ -77,15 +77,15 @@
             <!-- The slideshow -->
             <div  class="carousel-inner imagenAuto">
               <div class="carousel-item active">
-                <a href="noticia2222.html'"><img src="{% static 'core/img/Balacera 1.jpg'%}" class="img-fluid" alt="Los Angeles"></a>
+                <a href="{% url 'noticia2' %}"><img src="{% static 'core/img/Balacera 1.jpg'%}" class="img-fluid" alt="Los Angeles"></a>
                 <div class="carousel-caption">
                 </div>
               </div>
               <div class="carousel-item">
-                <a href="../caosnews2.0/noticias/noticia1111.html"><img src="{% static 'core/img/Choque2.jpg'%}" class="img-fluid" style="margin: -3%;"alt="Chicago"></a>
+                <a href="{% url 'noticia1' %}"><img src="{% static 'core/img/Choque2.jpg'%}" class="img-fluid" style="margin: -3%;"alt="Chicago"></a>
               </div>
               <div class="carousel-item imagenAuto">
-                <a href="../caosnews2.0/noticias/noticia3333.html"><img src="{% static 'core/img/Fruta 5.jpg'%}" class="img-fluid" style="margin: -5%;" alt="New York"></a>
+                <a href="{% url 'noticia3' %}"><img src="{% static 'core/img/Fruta 5.jpg'%}" class="img-fluid" style="margin: -5%;" alt="New York"></a>
               </div>
             </div>
           
@@ -120,7 +120,7 @@
                 
                 <div class="card-body">
                   <h1>Publica tu noticia aquí</h1>
-                  <a href="../caosnews2.0/PaginaLogin.html" ><img src="imagenes/foto camara.jpg"  alt="..." onclick="main()"></a>
+                  <a href="{% url 'paginalogin' %}" ><img src="{% static 'core/img/foto camara.jpg'%}"  alt="..." onclick="main()"></a>
                 </div>
               </div>
 
