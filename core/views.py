@@ -72,4 +72,4 @@ def form_mod_noticia(request, codigo):
 def form_del_noticia( request, codigo):
     noticia = Noticia.objects.get(codigo=codigo)
     noticia.delete()
-    return redirect(to="mainlogeado")
+    return redirect(to="listanoticias")
