@@ -2,7 +2,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Formulario Periodistas</title>
-  <link href="css/cssf2.css" rel="stylesheet" type="text/css">
+  {% load static %}
+  <link href="{% static  'core/css/cssf2.css' %}" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
   integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
   <script type="text/javascript">
@@ -66,8 +67,8 @@
                     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
                     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
                     
-                    <a href="../Caos-News/PaginaMain.html" > <button id="button" type="button" onclick="mostrar()"><p>Enviar</p></button>  </a>
-                    <a href="../Caos-News/paginaMainLogeado.html">volver al inicio</a>      
+                    <a href="{% url  'main' %}" > <button id="button" type="button" onclick="mostrar()"><p>Enviar</p></button>  </a>
+                    <a href="{% url  'mainlogeado' %}">volver al inicio</a>      
           </form>
     </div>  
   </div> 
