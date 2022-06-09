@@ -11,22 +11,15 @@
     <script>
       !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
    </script>
-    <script type="text/javascript">
-      function main(){
-          
-          alert("Debes estar registrado para subir una noticia");
-          
-      }
-  
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#seleccionar").click(function(){
-        $(this).hide();
-      })
-    })
-
-  </script>
+     </script>
+     <script type="text/javascript">
+       $(document).ready(function(){
+         $("#seleccionar").click(function(){
+           $(this).hide();
+         })
+       })
+   
+     </script>
       
 
 </head>
@@ -34,7 +27,7 @@
   {% load static %}
   
     <nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
-        <a id="seleccionar" class="navbar-brand" href="{% url 'main' %}"><img src=" {% static 'core/img/caos_news_logo.jpg' %}" alt="Logo Caos-News" width="170" height="50"></a>
+        <a id="seleccionar" class="navbar-brand" href="#"><img src="{% static 'core/img/caos_news_logo.jpg' %}" alt="Logo Caos-News" width="170" height="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,14 +35,10 @@
         <div id="carousel1" class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li id="boton" class="nav-item">
-              <a class="btn btn-primary" href="{% url 'paginaregister' %}">Registrate aquí </a>
+              <a class="btn btn-primary" href="{% url 'main' %}">Cerrar sesion</a>
             </li>
             <li id="boton" class="nav-item">
-              <a class="btn btn-primary" href="{% url 'paginalogin' %}">Iniciar sesión</a>
-            </li>
-            
-            <li id="boton" class="nav-item">
-              <a class="btn btn-primary" href="{% url 'formulario1' %}">Trabaja con nosotros</a>
+              <a class="btn btn-primary" href="{% url 'listanoticias' %}">Mis Noticias</a>
             </li>
           </ul>
           <form id="boton" class="form-inline my-2 my-lg-0">
@@ -62,9 +51,7 @@
         <a class="weatherwidget-io" href="https://forecast7.com/es/n33d45n70d67/santiago/" data-label_1="SANTIAGO" data-label_2="CLIMA" data-theme="original" >SANTIAGO CLIMA</a>
       </div>
       <div class="text-center">
-          <div style="padding-bottom:5px">
-            <h3>Noticias Destacadas</h3>
-          </div>
+          <h3>Noticias Destacadas</h3>
           <div id="demo" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
@@ -76,18 +63,18 @@
           
             <!-- The slideshow -->
             <div  class="carousel-inner imagenAuto">
-              <div class="carousel-item active">
-                <a href="{% url 'noticia2' %}"><img src="{% static 'core/img/Balacera 1.jpg'%}" class="img-fluid" alt="Los Angeles"></a>
-                <div class="carousel-caption">
+                <div class="carousel-item active">
+                  <a href="{% url 'noticia2' %}"><img src="{% static 'core/img/Balacera 1.jpg'%}" class="img-fluid" alt="Los Angeles"></a>
+                  <div class="carousel-caption">
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <a href="{% url 'noticia1' %}"><img src="{% static 'core/img/Choque2.jpg'%}" class="img-fluid" style="margin: -3%;"alt="Chicago"></a>
+                </div>
+                <div class="carousel-item imagenAuto">
+                  <a href="{% url 'noticia3' %}"><img src="{% static 'core/img/Fruta 5.jpg'%}" class="img-fluid" style="margin: -5%;" alt="New York"></a>
                 </div>
               </div>
-              <div class="carousel-item">
-                <a href="{% url 'noticia1' %}"><img src="{% static 'core/img/Choque2.jpg'%}" class="img-fluid" style="margin: -3%;"alt="Chicago"></a>
-              </div>
-              <div class="carousel-item imagenAuto">
-                <a href="{% url 'noticia3' %}"><img src="{% static 'core/img/Fruta 5.jpg'%}" class="img-fluid" style="margin: -5%;" alt="New York"></a>
-              </div>
-            </div>
           
             <!-- Left and right controls -->
             <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -120,7 +107,7 @@
                 
                 <div class="card-body">
                   <h1>Publica tu noticia aquí</h1>
-                  <a href="{% url 'paginalogin' %}" ><img src="{% static 'core/img/foto camara.jpg'%}"  alt="..." onclick="main()"></a>
+                  <a href="{% url 'subirnoticia' %}"><img src="{% static 'core/img/foto camara.jpg' %}"  alt="..."></a>
                 </div>
               </div>
 
@@ -130,12 +117,12 @@
                 
                 <div class="card-body">
                   
-                  <h1>Nuestro equipo de trabajo</h1>
-                  <h4>-Martin del Rio</h4>
-                  <h4>-Benjamin Rocco</h4>
-                  <h4>-Alvaro Rios</h4>
-                  <h4>-Cristian Maldonado</h4>
-                  <h4>-Jose Pablo Herrera</h4>
+                  <h1 id="seleccionar" >Nuestro equipo de trabajo</h1>
+                  <h4 id="seleccionar">-Martin del Rio</h4>
+                  <h4 id="seleccionar">-Benjamin Rocco</h4>
+                  <h4 id="seleccionar">-Alvaro Rios</h4>
+                  <h4 id="seleccionar">-Cristian Maldonado</h4>
+                  <h4 id="seleccionar">-Jose Pablo Herrera</h4>
                 </div>
               </div>
 

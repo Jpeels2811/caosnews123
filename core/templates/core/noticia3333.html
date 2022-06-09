@@ -3,7 +3,6 @@
 <head>
 
     <title>Caos-News</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     {% load static %}
@@ -19,22 +18,12 @@
       }
   
   </script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $("#seleccionar").click(function(){
-        $(this).hide();
-      })
-    })
-
-  </script>
       
 
 </head>
 <body id="body">
-  {% load static %}
-  
     <nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
-        <a id="seleccionar" class="navbar-brand" href="{% url 'main' %}"><img src=" {% static 'core/img/caos_news_logo.jpg' %}" alt="Logo Caos-News" width="170" height="50"></a>
+        <a class="navbar-brand" href="{% url 'main' %}"><img src="{% static 'core/img/caos_news_logo.jpg' %}" alt="Logo Caos-News" width="170" height="50"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -62,56 +51,16 @@
         <a class="weatherwidget-io" href="https://forecast7.com/es/n33d45n70d67/santiago/" data-label_1="SANTIAGO" data-label_2="CLIMA" data-theme="original" >SANTIAGO CLIMA</a>
       </div>
       <div class="text-center">
-          <div style="padding-bottom:5px">
-            <h3>Noticias Destacadas</h3>
-          </div>
+        <div style="padding-left: 2%;" class="titulo"><h1>Alza en precio de frutas</h1></div>
           <div id="demo" class="carousel slide" data-ride="carousel">
 
-            <!-- Indicators -->
-            <ul class="carousel-indicators">
-              <li data-target="#demo" data-slide-to="0" class="active"></li>
-              <li data-target="#demo" data-slide-to="1"></li>
-              <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-          
-            <!-- The slideshow -->
-            <div  class="carousel-inner imagenAuto">
-              <div class="carousel-item active">
-                <a href="{% url 'noticia2' %}"><img src="{% static 'core/img/Balacera 1.jpg'%}" class="img-fluid" alt="Los Angeles"></a>
-                <div class="carousel-caption">
-                </div>
-              </div>
-              <div class="carousel-item">
-                <a href="{% url 'noticia1' %}"><img src="{% static 'core/img/Choque2.jpg'%}" class="img-fluid" style="margin: -3%;"alt="Chicago"></a>
-              </div>
-              <div class="carousel-item imagenAuto">
-                <a href="{% url 'noticia3' %}"><img src="{% static 'core/img/Fruta 5.jpg'%}" class="img-fluid" style="margin: -5%;" alt="New York"></a>
-              </div>
-            </div>
-          
-            <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-              <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-              <span class="carousel-control-next-icon"></span>
-            </a>
-          
-          </div>
           <div class="row mx-5">
             <div class="col ml-5">
               <div class="card" >
                 
-                <div class="card-body">
-                  <h1>Acerca de nosotros</h1>
-                  <p style="text-align: justify;" class="card-text">
-                    Somos un grupo de jóvenes estudiantes de periodismo y de comunicación audio visual, cansados de los medios
-            tradicionales, decididos a formar un colectivo de noticias independiente.
-            Cada una de las personas que se une a esta idea, aporta con su experiencia y de esta forma asignan las
-            tareas a cada uno de los integrantes para tratar de cubrir de la mejor forma posible las noticias que están
-            pasando en Chile y el mundo con una mirada fresca y joven.
-                  </p>
-                </div>
+
+                    <div class="img1"><img src="{% static 'core/img/Fruta 1.jpg' %}" alt="imagen de perrito" width="300px" height="400px"></div>
+
               </div>
 
             </div>
@@ -119,29 +68,41 @@
               <div class="card">
                 
                 <div class="card-body">
-                  <h1>Publica tu noticia aquí</h1>
-                  <a href="{% url 'paginalogin' %}" ><img src="{% static 'core/img/foto camara.jpg'%}"  alt="..." onclick="main()"></a>
+                    <div style="text-align: justify;" class="cuerpo">En los últimos meses la fruta ha ido en alza pero no tanto como en el último donde se a disparado enormemente
+                        en comparación a los anteriores, la gente está muy preocupada de no poder comprar fruta por su altísimo precio
+                        ya que esta ha subido hasta un 120% en comparación al año pasado, mucha gente va a la vega a comprar diversos productos
+                        pero principalmente la gente compra frutas y verduras en este lugar que por lo generas es muy concurrido pero ahora se ve
+                        mucho más vacío, los comerciantes declaran que no tiene la culpa ya que los distribuidores son los que está aumentando los precios 
+                        debido a una gran escasez de productos relacionados con la fruta, si bien antes las personas podía comprar por ejemplo 1kg de 
+                        manzanas a 900$ hoy en día ese mismo kilo usted lo encuentra a 2100$, al preguntarle a la gente comprando nos dijeron estas 
+                        palabras “No puede ser que la fruta cueste tanto estos son unos ladrones y se aprovechan de la gente”, “ciertamente la fruta 
+                        subió pero sé que no es culpa de los vendedores yo les compro igual yo la necesito ya que mi familia come mucha fruta y es sano” 
+                        ahora al preguntarle a la gente de la calle que le parecían los precios nos dijeron esto “No puede ser que este tan cara ya no 
+                        puedo comparar fruta para mis hijos”, “yo no pienso compara nada de fruta hasta que los precios bajen esos sinvergüenza solo 
+                        quieren aprovecharse de la gente” como se puede apreciar la mayoría de las personas se encuentran molestas y culpan principalmente 
+                        a los vendedores locales quienes si bien han subido los precios no son la raíz de esta laza en la fruta.
+                      </div>
                 </div>
               </div>
 
             </div>
             <div class="col ml-5">
-              <div class="card" >
-                
-                <div class="card-body">
-                  
-                  <h1>Nuestro equipo de trabajo</h1>
-                  <h4>-Martin del Rio</h4>
-                  <h4>-Benjamin Rocco</h4>
-                  <h4>-Alvaro Rios</h4>
-                  <h4>-Cristian Maldonado</h4>
-                  <h4>-Jose Pablo Herrera</h4>
-                </div>
-              </div>
+                <div class="img2"><img src="{% static 'core/img/Fruta 2.jpg' %}" alt="imagen de perrito" width="300px" height="400px"></div>
 
             </div>
             
+                            
+        <p>                                                                    *</p>
+        
+            <div style="text-align: justify;" class="pe">Periodista encargado: Pedro Arturo Gonzalez Jimenez<br>
+                            Categoria: Economia<br>
+                            Ubicacion: La vega central/Santiago de Chile
+                            13/03/2022
+                            </div>
+                            
+            
           </div>
+          
 
           
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
