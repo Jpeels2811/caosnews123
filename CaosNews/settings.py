@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'rest_framework',
+    'rest_noticia',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -78,8 +81,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1:1521 /orcl',
-        'USER': 'alumno9',
-        'PASSWORD': 'duoc',
+        'USER': 'alvarx',
+        'PASSWORD': 'alv',
         'TEST':{
             'USER': 'default_test',
             'TBLSPACE': 'default_space_tbls',
@@ -130,3 +133,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
+}

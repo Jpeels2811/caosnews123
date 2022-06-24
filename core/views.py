@@ -73,3 +73,5 @@ def form_del_noticia( request, codigo):
     noticia = Noticia.objects.get(codigo=codigo)
     noticia.delete()
     return redirect(to="listanoticias")
+
+
