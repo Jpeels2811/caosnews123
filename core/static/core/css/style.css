@@ -20,3 +20,8 @@
        color: black;
        text-decoration: line-through;
     }
+#forum{
+    position: relative;
+    top: 1000px;
+
+}
